@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Form Label Example</h1>
+
+    <form action="/submit" method="get">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required> <br><br>
+        
+        <label for="dob">Birthday:</label>
+        <input type="date" id="dob" name="dob" required> <br><br>
+
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <label for="hobbies">Hobbies:</label>
+        <input type="checkbox" id="sports" name="hobbies" value="sports">
+        <label for="sports">Sport</label>
+        <input type="checkbox" id="music" name="hobbies" value="music">
+        <label for="music">Music</label>
+        <input type="checkbox" id="reading" name="hobbies" value="reading">
+        <label for="reading">Reading</label><br><br>
+
+        <label for="city">City:</label>
+        <select name="city" id="city">
+            <option value="İstanbul">İstanbul</option>
+            <option value="Ankara">Ankara</option>
+            <option value="İzmir">İzmir</option>
+        </select><br><br>
+
+        <label for="message">Your Message:</label>
+        <textarea name="message" id="message" cols="50" rows="4"></textarea><br><br>
+        
+        <button type="submit">Send</button>
+
+    </form>
+</body>
+</html>
