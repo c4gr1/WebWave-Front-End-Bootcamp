@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let now = new Date();
+        console.log("Actual date and time : ", now);
+
+        let specificDate = new Date("November 2, 2013 22:22:24");
+        console.log("Spesific date: ", specificDate);
+
+        let specificDate2 = new Date(2024, 8, 19, 23,15,20,0);
+        console.log("Spesific date: ", specificDate2);
+
+        let year = now.getFullYear();
+        console.log("Year: ",year);
+
+        let month = now.getMonth();
+        console.log("Month: ",month + 1);
+
+        now.setFullYear(2030);
+        console.log("New date: ", now);
+
+        let startDate = new Date("August 1,2024");
+        let endDate = new Date("August 14,2024");
+        let timeDiff = endDate - startDate; // ms
+
+        let daysDiff = timeDiff / (1000 * 60 * 60* 24);
+
+        console.log(daysDiff);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function great(){
+            console.log("Hello");
+        }
+        great();
+
+        function greats(name){
+            console.log("Hello " + name);
+        }
+        greats("cagri");
+
+        function square(num){
+            return num*num;
+        }
+        let i = square(5);
+        console.log(i);
+
+        let sayHello = function(){
+            console.log("Hello world");
+        }
+
+        sayHello();
+
+        let multiply = (a,b) => a*b;
+        console.log(multiply(2,4));
+
+        (function(){
+            console.log("You dont need to call this function");
+        })();
+
+    </script>
+</body>
+</html>

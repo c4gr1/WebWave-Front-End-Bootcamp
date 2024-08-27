@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(let i = 0; i<5; i++){
+            console.log("Number: " + i);
+        }
+
+        let person = {
+            name : "Cagri",
+            age : 24,
+            city: "İstanbul"
+        };
+
+        for(let key in person){
+            console.log(key + ": "+ person[key]);
+        }
+
+        let colors = ["red","blue", "yellow"];
+        for(let color of colors){
+            console.log(color);
+        }
+
+        let i = 0;
+        while(i<5){
+            console.log("Number: " + i);
+            i++;
+        }
+
+        let x = 5;
+        do{
+            console.log("Number: " + x);
+            x++;
+        }while(x<5);
+    </script>
+</body>
+</html>

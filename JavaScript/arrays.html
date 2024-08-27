@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let emptyArray = [];
+        console.log("Empty array: ", emptyArray);
+
+        let mixedArray = [1, "Hello", true, null];
+        console.log("Mixed array: ", mixedArray);
+
+        let arrayLength = mixedArray.length;
+        console.log("Length of array: ", arrayLength);
+
+        let firstElement = mixedArray[0];
+        console.log("First Element: ", firstElement);
+
+        let lastElement = mixedArray[arrayLength-1];
+        console.log("Last Element: ", lastElement);
+
+        mixedArray.push("new element");
+        console.log("Updated Mixed array: ", mixedArray);
+
+        mixedArray.unshift("First");
+        console.log("With adding elemet to first index: ", mixedArray);
+
+        let removeElement = mixedArray.pop();
+        console.log("Removed last element: ", removeElement);
+
+        removeElement = mixedArray.shift();
+        console.log("Removing first element", removeElement);
+
+        mixedArray[1] = "Newww";
+        console.log("Uptaded Mixed array: ", mixedArray);
+
+        let numberArray = [2,3,5,6,1,2];
+        console.log("Number array: ", numberArray);
+
+        numberArray.sort((a,b) => a-b);
+        console.log("Sorted array: ", numberArray);
+
+        numberArray.reverse();
+        console.log("Reverse sorted array: ", numberArray);
+
+        let slicedArray = mixedArray.slice(0,3);
+        console.log("Sliced array: ", slicedArray);
+
+        let combinedArray = numberArray.concat(slicedArray);
+        console.log("Concatenated array: ", combinedArray);
+
+        let index = mixedArray.indexOf(true);
+        console.log("index of true is : ", index);
+
+        let isPresent = mixedArray.includes(false);
+        console.log(isPresent);
+    </script>
+</body>
+</html>

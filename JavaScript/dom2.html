@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">Hello</h1>
+    <p>Lorem, ipsum dolor.</p>
+    <button id="btn">click</button>
+
+    <script>
+        let header = document.getElementById("header");
+        let paragraph = document.querySelector("p");
+        let button = document.getElementById("btn");
+
+        header.textContent = "New Header";
+        paragraph.innerHTML = "<strong>This is bald font.</strong>";
+        header.style.color = "red";
+        header.style.fontSize = "24px";
+        header.style.backgroundColor = "yellow";
+
+        let body = document.body;
+        let firstChild = body.firstChild;
+        console.log(firstChild);
+
+        let newParagraph = document.createElement("p");
+        newParagraph.id = "newParagraph";
+        newParagraph.textContent = "new paragraph";
+        document.body.appendChild(newParagraph);
+
+        document.body.removeChild(header);
+
+        let link = document.createElement("a");
+        link.setAttribute("href", "https://www.techcareer.net/");
+        link.textContent = "Visit";
+        document.body.appendChild(link);
+
+        button.addEventListener("click",function(){
+            alert("clicked");
+        });
+
+        let ul= document.createElement("ul");
+        for(let i = 1; i<=5; i++){
+            let li = document.createElement("li");
+            li.textContent = `item ${i}`;
+            ul.appendChild(li);
+        }
+        document.body.appendChild(ul);
+    </script>
+</body>
+</html>
