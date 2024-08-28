@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Movie List</title>
+    <style>
+        body {
+            padding: 20px;
+            background-color: antiquewhite;
+        }
+        #movieList, #watchedList {
+            margin-top: 20px;
+        }
+        .movie-image {
+            width: 100px;
+            height: 100px;
+        }
+        .rating-stars {
+            font-size: 1.5rem;
+            color: gold;
+            cursor: pointer;
+        }
+        .comment-section {
+            margin-top: 10px;
+        }
+        .comment-section p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4 mt-4">Film Archive</h1>
+        <div class="mb-3">
+            <label for="movieName" class="form-label">Film Name:</label>
+            <input type="text" class="form-control" id="movieName">
+        </div>
+        <div class="mb-3">
+            <label for="imageUrl" class="form-label">Film Image URL:</label>
+            <input type="text" class="form-control" id="imageUrl">
+        </div>
+        <div class="mb-3">
+            <label for="category" class="form-label">Category:</label>
+            <select id="category" class="form-select">
+                <option value="Action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+                <option value="Horror">Horror</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" onclick="addMovie()">Add Film</button>
+
+        <h2 class="mt-4">Movies to Watch</h2>
+        <div id="movieList"></div>
+        <hr>
+        <h2 class="mt-4">Watched Movies</h2>
+        <div id="watchedList"></div>
+    </div>
+
+    <script>
+        function addMovie() {
+            var movieName = document.getElementById("movieName").value;
+            var imageUrl = document.getElementById("imageUrl").value;
+            var category = document.getElementById("category").value;
+
+            if (movieName.trim() === "" || imageUrl.trim() === "") {
+                alert("Please enter film name and image URL.");
+                return;
+            }
+
+            var movieList = document.getElementById("movieList");
+            var listItem = document.createElement("div");
+            listItem.className = "d-flex justify-content-between align-items-center border-bottom mb-2";
+
+            var movieContent = document.createElement("div");
+            movieContent.className = "d-flex align-items-center";
+
+            var movieImage = document.createElement("img");
+            movieImage.src = imageUrl;
+            movieImage.alt = movieName;
+            movieImage.className = "movie-image me-2";
+
+            var movieTitle = document.createElement("span");
+            movieTitle.textContent = movieName;
+
+            var movieCategory = document.createElement("span");
+            movieCategory.textContent = ` (${category})`;
+            movieCategory.className = "text-muted ms-2";
+
+            movieContent.appendChild(movieImage);
+            movieContent.appendChild(movieTitle);
+            movieContent.appendChild(movieCategory);
+
+            var buttons = document.createElement("div");
+            buttons.innerHTML = `
+                <button class="btn btn-success me-2" onclick="watchMovie(this)">Watched</button>
+                <button class="btn btn-danger me-2" onclick="removeMovie(this)">Remove</button>
+            `;
+
+            listItem.appendChild(movieContent);
+            listItem.appendChild(buttons);
+
+            movieList.appendChild(listItem);
+
+            document.getElementById("movieName").value = "";
+            document.getElementById("imageUrl").value = "";
+            document.getElementById("category").value = "";
+        }
+
+        function watchMovie(button) {
+            var listItem = button.parentNode.parentNode;
+            var watchedList = document.getElementById("watchedList");
+
+            var movieContent = listItem.querySelector(".d-flex .align-items-center");
+            var movieImage = movieContent.querySelector(".movie-image");
+            var movieTitle = movieContent.querySelector("span").textContent;
+            var movieCategory = movieContent.querySelector(".text-muted").textContent;
+
+            var existingCommentSection = listItem.querySelector(".comment-section");
+            if (existingCommentSection) {
+                alert("You have already commented on this movie.");
+                return;
+            }
+
+            var emotion = prompt("Please comment about the film: ");
+            if (!emotion) {
+                alert("Comment cannot be empty.");
+                return;
+            }
+
+            listItem.innerHTML = "";
+
+            var smallImage = movieImage.cloneNode();
+            smallImage.className = "movie-image me-2";
+            listItem.appendChild(smallImage);
+
+            listItem.innerHTML += `<span>${movieTitle} ${movieCategory}</span>`;
+
+            listItem.innerHTML += `
+                <div class="rating-stars" onclick="rateMovie(this)">
+                    <span data-rating="1">&#9733;</span>
+                    <span data-rating="2">&#9733;</span>
+                    <span data-rating="3">&#9733;</span>
+                    <span data-rating="4">&#9733;</span>
+                    <span data-rating="5">&#9733;</span>
+                </div>
+                <div class="comment-section">
+                    <p>${emotion}</p>
+                </div>
+            `;
+
+            watchedList.appendChild(listItem);
+
+            button.parentNode.innerHTML = `<span class="text-success">Watched</span>`;
+        }
+
+        function rateMovie(starElement) {
+            var stars = starElement.querySelectorAll('span');
+            var rating = parseInt(event.target.getAttribute('data-rating'));
+
+            stars.forEach(star => {
+                star.textContent = star.getAttribute('data-rating') <= rating ? '★' : '☆';
+            });
+        }
+
+        function removeMovie(button) {
+            var listItem = button.parentNode.parentNode;
+            listItem.remove();
+        }
+    </script>
+</body>
+</html>
