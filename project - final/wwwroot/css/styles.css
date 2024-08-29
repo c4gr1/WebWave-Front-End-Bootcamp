@@ -1,0 +1,175 @@
+/* Genel Gövde Ayarları */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header İçeriği Kapsayıcı */
+.header-content {
+    max-width: 1300px; /* İçerik genişliği artırıldı */
+    margin: 0 auto; /* Sağdan ve soldan ortalamak için */
+    padding: 0 20px; /* İçerideki elemanları sağa ve sola yaklaştırmak için padding azaltıldı */
+    display: flex; /* İçeriği yatay olarak hizalamak için */
+    align-items: center; /* Dikey hizalama */
+    justify-content: space-between; /* İçerikler arasındaki boşluğu eşit dağıtmak için */
+}
+
+/* Navbar içindeki logo */
+.navbar-brand img {
+    max-height: 50px;
+}
+
+/* Arama Çubuğu */
+form.d-flex {
+    flex-grow: 1;
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+/* Menü Öğeleri */
+.navbar-nav .nav-item {
+    margin-left: 20px;
+}
+
+.dropdown-menu {
+    min-width: 150px;
+}
+
+.dropdown-text {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    top: 50px;
+}
+
+.nav-item:hover .dropdown-text {
+    display: block;
+}
+
+/* Giriş Butonu */
+.btn-success {
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+/****************************************************/
+
+/* Tam Genişlikte Slider Konteyneri */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 555px; /* Konteyner yüksekliği */
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; /* Header'dan 20px boşluk */
+}
+
+/* Slayt İçeriği */
+.slider-content {
+    width: 80%; /* Slider içerik genişliği (max-width) */
+    max-width: 1200px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider.grabbing {
+    cursor: grabbing;
+}
+
+/* Bireysel Slide */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 50px 0; /* Yukarıdan ve aşağıdan 50px boşluk */
+}
+
+/* Slide İçindeki Resimler */
+.slide img {
+    width: 100%;
+    margin-top: 2px;
+    height: calc(100%); /* Resimleri yukarıdan ve aşağıdan 50px içeri alma */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Önceki ve Sonraki Butonlar */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Butonların Hover Durumu */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/****************************************************/
+
+/* Slick Dots */
+.dots {
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    z-index: 3;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.active-dot, .dot:hover {
+    background-color: #717171;
+}
+
+
+
+
+
+
