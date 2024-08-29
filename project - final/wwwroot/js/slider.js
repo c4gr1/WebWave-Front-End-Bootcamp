@@ -5,6 +5,7 @@ let prevTranslate = 0;
 let isDragging = false;
 
 const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
 const slider = document.querySelector('.slider');
 
 slides.forEach((slide, index) => {
@@ -71,6 +72,7 @@ function touchEnd() {
     }
 
     setPositionByIndex();
+    updateDots();
 
     slider.classList.remove('grabbing');
 }
@@ -108,9 +110,20 @@ function moveSlide(direction) {
         currentSlideIndex = slides.length - 1; // First slide to last slide
     }
     setPositionByIndex();
+    updateDots(); // Update dots after slide changes
 }
 
 function currentSlide(index) {
     currentSlideIndex = index;
     setPositionByIndex();
+    updateDots(); // Update dots when a dot is clicked
+}
+
+function updateDots() {
+    dots.forEach((dot, index) => {
+        dot.classList.remove('active-dot');
+        if (index === currentSlideIndex) {
+            dot.classList.add('active-dot');
+        }
+    });
 }

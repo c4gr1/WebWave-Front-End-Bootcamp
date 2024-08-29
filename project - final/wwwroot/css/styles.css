@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    background-color: #F0F0F0;
 }
 
 /* Header İçeriği Kapsayıcı */
@@ -158,14 +159,14 @@ form.d-flex {
     height: 15px;
     width: 15px;
     margin: 0 5px;
-    background-color: #bbb;
+    background-color: #F6FEF4;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.3s ease;
 }
 
 .active-dot, .dot:hover {
-    background-color: #717171;
+    background-color: #00C26D;
 }
 
 
