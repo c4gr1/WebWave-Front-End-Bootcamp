@@ -469,6 +469,139 @@ form.d-flex {
     padding: 10px 20px;
 }
 
+/****************************************************/
+
+.participant-section_2 {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.participant-section_2 h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 75px;
+    font-weight: bold;
+}
+
+
+.container_2 {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.participant-slider-container_2 {
+    position: relative;
+    overflow: hidden;
+    max-width: 90%; /* Sağdan ve soldan içeri çekmek için genişliği ayarlandı */
+    margin: 0 auto; /* Ortalamak için */
+}
+
+.participant-slider_2 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* Paddingler kaldırıldı */
+}
+
+.participant-slide_2 {
+    flex: 0 0 calc(50% - 10px); /* Ekranın yarısını kaplasın, her biri arasında boşluk olsun */
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 0 5px; /* Kutular arasında boşluk */
+    background-color: #fff;
+}
+
+.participant-img-container_2 {
+    flex: 0 0 20%; /* Resim kısmı genişliği */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.participant-img_2 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.participant-details_2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+    height: 100%;
+}
+
+.participant-quote_2 {
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-y: auto;
+    max-height: 100px; /* İçerik yüksekliği */
+    text-align: left;
+}
+
+.participant-footer_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.participant-name_2 {
+    font-weight: bold;
+}
+
+.participant-title_2 {
+    font-size: 12px;
+    color: #777;
+}
+
+.prev_2, .next_2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev_2 {
+    left: 0px; /* Butonları kutunun içine çekmek için */
+}
+
+.next_2 {
+    right: 0px; /* Butonları kutunun içine çekmek için */
+}
+
+.btn_2 {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn_2:hover {
+    background-color: #218838;
+}
+
+
+
+
+
 
 
 
