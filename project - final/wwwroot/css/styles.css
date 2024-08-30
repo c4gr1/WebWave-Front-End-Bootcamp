@@ -249,10 +249,6 @@ form.d-flex {
 
 /****************************************************/
 
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
 .events-section {
     padding: 60px 0;
     background-color: #f9f9f9;
@@ -275,7 +271,7 @@ body {
 
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     height: 444px; /* Kartların yüksekliği sabitlendi */
     display: flex;
     flex-direction: column;
@@ -286,7 +282,7 @@ body {
 }
 
 .card:hover {
-    border-color: #28a745;
+    border-color: black;
 }
 
 .card-img-top {
