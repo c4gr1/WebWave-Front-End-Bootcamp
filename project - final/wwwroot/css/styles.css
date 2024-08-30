@@ -46,6 +46,7 @@ form.d-flex {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     top: 50px;
+    z-index: 1;
 }
 
 .nav-item:hover .dropdown-text {
@@ -598,8 +599,299 @@ form.d-flex {
     background-color: #218838;
 }
 
+/****************************************************/
+
+.events-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px;
+    text-align: left;
+    background-color: #fff;
+}
+
+.event {
+    flex: 1;
+    margin: 0 10px;
+    background-color: #fff;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* İçeriği sola hizalar */
+}
+
+.event img {
+    margin-bottom: 20px;
+}
+
+.event h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.event p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.event .btn-link {
+    color: #28a745;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: auto; /* Butonu en alt kısma yerleştirir */
+    font-size: 16px;
+}
+
+/****************************************************/
+
+.contact-section {
+    background-color: #293349;
+    padding: 40px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.contact-section h2 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-form input[type="email"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+}
+
+.contact-form button {
+    padding: 0px 30px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 0 1px 1px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px; /* Yüksekliği ayarlamak için */
+    box-shadow: 0 0 0 5px #fff; /* Etrafında beyaz boşluk */
+    outline: none;
+}
 
 
+.contact-info {
+    color: #8FCACE;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #00C26D;
+}
+
+.contact-info div {
+    font-size: 16px;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-info span {
+    margin: 0 10px;
+    color: #8FCACE;
+}
+
+/****************************************************/
+
+.site-footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    color: #6c757d;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #212529;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    text-align: left; /* Metin ve logo sola hizalı */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo-img {
+    max-width: 150px;
+    margin-bottom: 8px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    color: #6c757d;
+    margin: 0; /* Üst ve alt margin'i sıfırla */
+}
+
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media h4 {
+    font-size: 14px;
+    color: #212529;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.social-media a img {
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/****************************************************/
+
+.legal-footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    font-size: 12px;
+    color: #6c757d;
+    border-top: 1px solid #dee2e6;
+}
+
+.legal-footer .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.legal-footer-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 12px;
+    color: #6c757d;
+    padding-bottom: 10px;
+}
+
+.lang-section {
+    display: flex;
+}
+
+.lang-section a {
+    color: #6c757d;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.lang-section a:hover {
+    text-decoration: underline;
+}
+
+.copyright-section {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.copyright-section span {
+    margin-right: 10px;
+}
+
+.copyright-section .support-email {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.copyright-section .support-email:hover {
+    text-decoration: underline;
+}
+
+.legal-content {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.legal-content img.iskur-logo {
+    margin-right: 15px;
+    max-width: 50px;
+}
+
+.legal-content p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 8.8px;
+    color: #6c757d;
+}
 
 
 
