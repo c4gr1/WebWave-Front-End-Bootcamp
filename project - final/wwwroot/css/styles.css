@@ -376,7 +376,98 @@ form.d-flex {
     margin-top: 5px; /* Tarih ile üstteki metin arasında boşluk */
 }
 
+/****************************************************/
 
+.neden-techcareer {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.neden-techcareer h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: left; /* Başlığı sola hizala */
+    margin-left: 150px; /* İlk feature item ile hizalayacak şekilde margin ekle */
+    font-weight: bold;
+}
+
+.features {
+    display: flex;
+    justify-content: flex-start; /* Feature item'ları soldan başlat */
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    flex: 1;
+    max-width: 300px;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.feature-item img {
+    max-width: 80px;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.feature-item p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/****************************************************/
+
+.career-guide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url('../assets/career-guide-bg.png'); /* Arka plan resmi */
+    background-size: cover;
+    background-position: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 300px; /* Minimum yükseklik */
+}
+
+.career-content {
+    position: relative;
+    z-index: 1; /* İçeriği arka plan resminin önünde tutmak için */
+    max-width: 600px;
+    color: #000; /* Yazı rengi */
+    margin-left: 100px; /* Sağ tarafa kaydırmak için margin-left ekleyelim */
+}
+
+.career-content h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.career-content h3 {
+    font-size: 24px;
+    color: #28a745; /* Yeşil renk */
+    margin-bottom: 20px;
+}
+
+.career-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.career-content .btn-success {
+    font-size: 16px;
+    padding: 10px 20px;
+}
 
 
 
