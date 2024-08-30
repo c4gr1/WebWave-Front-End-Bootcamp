@@ -601,7 +601,7 @@ form.d-flex {
 
 /****************************************************/
 
-.events-section {
+.events-section_2 {
     display: flex;
     justify-content: space-between;
     padding: 50px 100px;
@@ -609,7 +609,7 @@ form.d-flex {
     background-color: #fff;
 }
 
-.event {
+.event_2 {
     flex: 1;
     margin: 0 10px;
     background-color: #fff;
@@ -620,22 +620,22 @@ form.d-flex {
     align-items: flex-start; /* İçeriği sola hizalar */
 }
 
-.event img {
+.event_2 img {
     margin-bottom: 20px;
 }
 
-.event h3 {
+.event_2 h3 {
     font-size: 24px;
     margin-bottom: 15px;
 }
 
-.event p {
+.event_2 p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
-.event .btn-link {
+.event_2 .btn-link {
     color: #28a745;
     font-weight: bold;
     text-decoration: none;
