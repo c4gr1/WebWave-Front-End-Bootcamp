@@ -1,4 +1,4 @@
-/* Genel Gövde Ayarları */
+
 body {
     margin: 0;
     padding: 0;
@@ -6,66 +6,136 @@ body {
     background-color: #F0F0F0;
 }
 
-/* Header İçeriği Kapsayıcı */
 .header-content {
-    max-width: 1300px; /* İçerik genişliği artırıldı */
-    margin: 0 auto; /* Sağdan ve soldan ortalamak için */
-    padding: 0 20px; /* İçerideki elemanları sağa ve sola yaklaştırmak için padding azaltıldı */
-    display: flex; /* İçeriği yatay olarak hizalamak için */
-    align-items: center; /* Dikey hizalama */
-    justify-content: space-between; /* İçerikler arasındaki boşluğu eşit dağıtmak için */
+    max-width: 1300px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
 }
 
-/* Navbar içindeki logo */
 .navbar-brand img {
     max-height: 50px;
 }
 
-/* Arama Çubuğu */
 form.d-flex {
     flex-grow: 1;
     max-width: 300px;
     margin-right: 20px;
 }
 
-/* Menü Öğeleri */
 .navbar-nav .nav-item {
     margin-left: 20px;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .dropdown-menu {
     min-width: 150px;
+    border-top: 4px solid #00C26D;
+    border-radius: 0 0 5px 5px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.dropdown-menu a.dropdown-item {
+    color: #333; 
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu a.dropdown-item:hover {
+    color: #00C26D; 
+    background-color: #f8f9fa; 
 }
 
 .dropdown-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
     display: none;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #333;
+    color: #fff;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    top: 50px;
-    z-index: 1;
+    width: 325px;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.form-control::placeholder {
+    color: #A5A9B3; /* Buraya istediğiniz rengi yazabilirsiniz */
+    opacity: 0.8; /* Opaklık ayarını isteğe göre değiştirebilirsiniz */
+}
+
+.dropdown-text::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
 }
 
 .nav-item:hover .dropdown-text {
     display: block;
 }
 
-/* Giriş Butonu */
-.btn-success {
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.nav-item.dropdown .dropdown-toggle::after {
+    display: none;
+}
+
+.header-button .btn-success {
+    border: none;
+    margin-left: 150px;
     padding: 6px 12px;
     font-size: 14px;
+    background-color: #00C26D;
+    width: 120px; 
+    height: 36px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.header-button .btn-success:hover {
+    background-color: #02D076;
+}
+
+.green-dot {
+    height: 8px; 
+    width: 8px; 
+    background-color: #00C26D; 
+    border-radius: 50%; 
+    display: inline-block;
+    margin-right: 6px; 
+    vertical-align: middle; 
+}
+
+.nav-item a.nav-link:hover {
+    color: #00C26D;
+}
+
 
 /****************************************************/
 
-/* Tam Genişlikte Slider Konteyneri */
 .slider-container {
     position: relative;
     width: 100%;
-    height: 555px; /* Konteyner yüksekliği */
+    height: 555px; 
     background-image: url('../assets/background.png');
     background-size: cover;
     background-position: center;
@@ -73,22 +143,19 @@ form.d-flex {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0; /* Header'dan 20px boşluk */
+    padding: 20px 0; 
 }
 
-/* Slayt İçeriği */
 .slider-content {
-    width: 80%; /* Slider içerik genişliği (max-width) */
+    width: 80%; 
     max-width: 1200px;
     height: 100%;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
 
-/* Slider */
 .slider {
     display: flex;
     height: 100%;
@@ -99,23 +166,20 @@ form.d-flex {
     cursor: grabbing;
 }
 
-/* Bireysel Slide */
 .slide {
     min-width: 100%;
     box-sizing: border-box;
-    padding: 50px 0; /* Yukarıdan ve aşağıdan 50px boşluk */
+    padding: 50px 0; 
 }
 
-/* Slide İçindeki Resimler */
 .slide img {
     width: 100%;
     margin-top: 2px;
-    height: calc(100%); /* Resimleri yukarıdan ve aşağıdan 50px içeri alma */
+    height: calc(100%); 
     object-fit: cover;
     border-radius: 10px;
 }
 
-/* Önceki ve Sonraki Butonlar */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -139,14 +203,12 @@ form.d-flex {
     right: 10px;
 }
 
-/* Butonların Hover Durumu */
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
 /****************************************************/
 
-/* Slick Dots */
 .dots {
     text-align: center;
     position: absolute;
@@ -172,7 +234,6 @@ form.d-flex {
 
 /****************************************************/
 
-/* Logo Slider Konteyneri */
 .logo-slider-container {
     position: relative;
     width: 100%;
@@ -183,32 +244,28 @@ form.d-flex {
     align-items: center;
 }
 
-/* Seçim Engelleme ve Drag işlemini engelleme */
 .logo-slider-container img {
-    user-select: none; /* Kullanıcının metni seçmesini engeller */
-    -webkit-user-drag: none; /* Resimlerin sürüklenmesini engeller */
-    pointer-events: none; /* Resimlerin etkileşimlerini devre dışı bırakır */
+    user-select: none; 
+    -webkit-user-drag: none; 
+    pointer-events: none; 
 }
 
 
-/* Logo Slayt İçeriği */
 .logo-slider-content {
-    width: 80%; /* İçerik genişliği */
+    width: 80%; 
     max-width: 1200px;
     overflow: hidden;
     position: relative;
 }
 
-/* Logo Slider */
 .logo-slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-/* Bireysel Logo Slide */
 .logo-slide {
-    min-width: 150px; /* Logoların genişliği */
-    margin: 0 15px; /* Logolar arasındaki boşluk */
+    min-width: 150px; 
+    margin: 0 15px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,7 +277,6 @@ form.d-flex {
     object-fit: contain;
 }
 
-/* Önceki ve Sonraki Butonlar */
 .logo-prev, .logo-next {
     position: absolute;
     top: 50%;
@@ -265,20 +321,20 @@ form.d-flex {
 .cards-container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Kartlar arasındaki yatay boşluk 20px olarak ayarlandı */
-    max-width: 1200px; /* Kartları içeren konteynerin genişliği */
-    margin: 0 auto; /* Kartları yatayda ortalamak için */
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 1px solid transparent;
-    height: 444px; /* Kartların yüksekliği sabitlendi */
+    height: 444px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 350px; /* Kartların genişliği */
-    margin-bottom: 20px; /* Alttan boşluk */
+    width: 350px; 
+    margin-bottom: 20px; 
     padding: 10px;
 }
 
@@ -287,35 +343,35 @@ form.d-flex {
 }
 
 .card-img-top {
-    height: 150px; /* Resim yüksekliği */
+    height: 150px; 
     object-fit: cover;
-    margin-bottom: 10px; /* Resim ve içerik arasında boşluk */
+    margin-bottom: 10px; 
 }
 
 .card-body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* İçeriği üstten hizalamak için */
-    align-items: center; /* İçeriği ortalamak için */
-    text-align: center; /* Metni ortalamak için */
+    justify-content: flex-start; 
+    align-items: center; 
+    text-align: center; 
 }
 
 .card-title {
-    font-size: 16px; /* Başlık boyutu */
+    font-size: 16px; 
     font-weight: bold;
-    margin-bottom: 10px; /* Başlık ve alt metin arasında boşluk */
+    margin-bottom: 10px; 
 }
 
 .card-text {
     font-size: 14px;
     color: #555;
-    text-align: center; /* Metni ortalamak için */
-    margin-bottom: 10px; /* Metin ve etiketler arasında boşluk */
+    text-align: center; 
+    margin-bottom: 10px; 
 }
 
 .tags {
-    margin-bottom: 10px; /* Etiketler ve buton arasında boşluk */
+    margin-bottom: 10px; 
 }
 
 .tags .badge {
@@ -327,11 +383,11 @@ form.d-flex {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: auto; /* Footer'ın alt kısımda olmasını sağlar */
+    margin-top: auto; 
 }
 
 .text-center .btn-success {
-    padding: 8px 16px; /* Buton boyutları */
+    padding: 8px 16px; 
     font-size: 14px;
     font-weight: bold;
     margin-left: auto;
@@ -339,20 +395,20 @@ form.d-flex {
 }
 
 .apply-btn {
-    padding: 4px 12px; /* Butonun inceltilmiş padding değerleri */
-    font-size: 13px; /* Font boyutu küçültüldü */
+    padding: 4px 12px; 
+    font-size: 13px; 
     font-weight: bold;
     background-color: #00C26D;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%; /* Butonu geniş yapmak için */
-    max-width: 120px; /* Butonun maksimum genişliği */
+    width: 100%; 
+    max-width: 120px; 
 }
 
 .apply-btn:hover {
-    background-color: #02D076; /* Hover rengini koyulaştırdık */
+    background-color: #02D076; 
 }
 
 .btn-success:hover{
@@ -368,13 +424,13 @@ form.d-flex {
 }
 
 .application-deadline span {
-    display: block; /* Metinleri alt alta getirmek için */
+    display: block; 
 }
 
 .application-deadline .deadline-date {
-    font-weight: bold; /* Tarihi kalın yapar */
-    font-size: 16px; /* Tarih için biraz daha büyük font boyutu */
-    margin-top: 5px; /* Tarih ile üstteki metin arasında boşluk */
+    font-weight: bold; 
+    font-size: 16px; 
+    margin-top: 5px; 
 }
 
 /****************************************************/
@@ -388,14 +444,14 @@ form.d-flex {
 .neden-techcareer h2 {
     font-size: 32px;
     margin-bottom: 30px;
-    text-align: left; /* Başlığı sola hizala */
-    margin-left: 150px; /* İlk feature item ile hizalayacak şekilde margin ekle */
+    text-align: left; 
+    margin-left: 150px; 
     font-weight: bold;
 }
 
 .features {
     display: flex;
-    justify-content: flex-start; /* Feature item'ları soldan başlat */
+    justify-content: flex-start; 
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
@@ -431,20 +487,20 @@ form.d-flex {
     position: relative;
     display: flex;
     align-items: center;
-    background-image: url('../assets/career-guide-bg.png'); /* Arka plan resmi */
+    background-image: url('../assets/career-guide-bg.png'); 
     background-size: cover;
     background-position: center;
     padding-top: 50px;
     padding-bottom: 50px;
-    min-height: 300px; /* Minimum yükseklik */
+    min-height: 300px; 
 }
 
 .career-content {
     position: relative;
-    z-index: 1; /* İçeriği arka plan resminin önünde tutmak için */
+    z-index: 1; 
     max-width: 600px;
-    color: #000; /* Yazı rengi */
-    margin-left: 100px; /* Sağ tarafa kaydırmak için margin-left ekleyelim */
+    color: #000; 
+    margin-left: 100px; 
 }
 
 .career-content h2 {
@@ -455,7 +511,7 @@ form.d-flex {
 
 .career-content h3 {
     font-size: 24px;
-    color: #28a745; /* Yeşil renk */
+    color: #28a745; 
     margin-bottom: 20px;
 }
 
@@ -494,30 +550,29 @@ form.d-flex {
 .participant-slider-container_2 {
     position: relative;
     overflow: hidden;
-    max-width: 90%; /* Sağdan ve soldan içeri çekmek için genişliği ayarlandı */
-    margin: 0 auto; /* Ortalamak için */
+    max-width: 90%; 
+    margin: 0 auto; 
 }
 
 .participant-slider_2 {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    /* Paddingler kaldırıldı */
 }
 
 .participant-slide_2 {
-    flex: 0 0 calc(50% - 10px); /* Ekranın yarısını kaplasın, her biri arasında boşluk olsun */
+    flex: 0 0 calc(50% - 10px); 
     display: flex;
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
     border: 1px solid #ddd;
     border-radius: 8px;
-    margin: 0 5px; /* Kutular arasında boşluk */
+    margin: 0 5px; 
     background-color: #fff;
 }
 
 .participant-img-container_2 {
-    flex: 0 0 20%; /* Resim kısmı genişliği */
+    flex: 0 0 20%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -525,10 +580,12 @@ form.d-flex {
 }
 
 .participant-img_2 {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 156px;
+    height: 156px;
     object-fit: cover;
+    user-select: none; /* Resim seçimini engelleme */
+    pointer-events: none; /* Resim tıklanmasını engelleme */
+    -webkit-user-drag: none; /* Resim sürüklenmesini engelleme */
 }
 
 .participant-details_2 {
@@ -544,7 +601,7 @@ form.d-flex {
     font-size: 14px;
     line-height: 1.5;
     overflow-y: auto;
-    max-height: 100px; /* İçerik yüksekliği */
+    max-height: 100px; 
     text-align: left;
 }
 
@@ -577,11 +634,11 @@ form.d-flex {
 }
 
 .prev_2 {
-    left: 0px; /* Butonları kutunun içine çekmek için */
+    left: 0px; 
 }
 
 .next_2 {
-    right: 0px; /* Butonları kutunun içine çekmek için */
+    right: 0px; 
 }
 
 .btn_2 {
@@ -617,7 +674,7 @@ form.d-flex {
     text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* İçeriği sola hizalar */
+    align-items: flex-start; 
 }
 
 .event_2 img {
@@ -639,7 +696,7 @@ form.d-flex {
     color: #28a745;
     font-weight: bold;
     text-decoration: none;
-    margin-top: auto; /* Butonu en alt kısma yerleştirir */
+    margin-top: auto; 
     font-size: 16px;
 }
 
@@ -690,8 +747,8 @@ form.d-flex {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 44px; /* Yüksekliği ayarlamak için */
-    box-shadow: 0 0 0 5px #fff; /* Etrafında beyaz boşluk */
+    height: 44px; 
+    box-shadow: 0 0 0 5px #fff; 
     outline: none;
 }
 
@@ -727,7 +784,7 @@ form.d-flex {
 /****************************************************/
 
 .site-footer {
-    background-color: #f8f9fa;
+    background-color: #F0F0F0;
     padding: 40px 0;
     font-size: 14px;
 }
@@ -776,7 +833,7 @@ form.d-flex {
 }
 
 .footer-logo {
-    text-align: left; /* Metin ve logo sola hizalı */
+    text-align: left;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -790,7 +847,7 @@ form.d-flex {
 .footer-logo p {
     font-size: 14px;
     color: #6c757d;
-    margin: 0; /* Üst ve alt margin'i sıfırla */
+    margin: 0;
 }
 
 
@@ -818,7 +875,7 @@ form.d-flex {
 /****************************************************/
 
 .legal-footer {
-    background-color: #f8f9fa;
+    background-color: #F0F0F0;
     padding: 20px 0;
     font-size: 12px;
     color: #6c757d;

@@ -3,6 +3,9 @@ let startPos = 0;
 let currentTranslate = 0;
 let prevTranslate = 0;
 let isDragging = false;
+let animationID;
+let autoSlideInterval = 5000; // 5 saniye
+let slideInterval;
 
 const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
@@ -36,16 +39,22 @@ images.forEach(img => {
     });
 });
 
+// Otomatik geçişi başlat
+startAutoSlide();
+
 function touchStart(index) {
     return function(event) {
         currentSlideIndex = index;
         startPos = getPositionX(event);
         isDragging = true;
 
-        // Prevent any default behavior
-        slider.classList.add('grabbing');
+        // Transition iptal edilir
+        slider.style.transition = 'none';
 
-        // Stop any current animations
+        // Otomatik geçişi durdur
+        clearInterval(slideInterval);
+
+        // Cancel the animation frame if it is in progress
         cancelAnimationFrame(animationID);
     };
 }
@@ -55,26 +64,20 @@ function touchEnd() {
 
     const movedBy = currentTranslate - prevTranslate;
 
-    if (movedBy < -50) {
-        if (currentSlideIndex < slides.length - 1) {
-            currentSlideIndex += 1;
-        } else {
-            currentSlideIndex = 0; // Last slide to first slide
-        }
-    }
-
-    if (movedBy > 50) {
-        if (currentSlideIndex > 0) {
-            currentSlideIndex -= 1;
-        } else {
-            currentSlideIndex = slides.length - 1; // First slide to last slide
-        }
+    if (movedBy < -100 && currentSlideIndex < slides.length - 1) {
+        currentSlideIndex += 1;
+    } else if (movedBy > 100 && currentSlideIndex > 0) {
+        currentSlideIndex -= 1;
     }
 
     setPositionByIndex();
     updateDots();
 
-    slider.classList.remove('grabbing');
+    slider.style.transition = 'transform 0.3s ease-out';
+
+    // Otomatik geçişi tekrar başlatmadan önce sıfırlayın
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, autoSlideInterval);
 }
 
 function touchMove(event) {
@@ -99,6 +102,18 @@ function setPositionByIndex() {
     setSliderPosition();
 }
 
+function startAutoSlide() {
+    slideInterval = setInterval(() => {
+        nextSlide();
+    }, autoSlideInterval);
+}
+
+function nextSlide() {
+    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+    setPositionByIndex();
+    updateDots();
+}
+
 function moveSlide(direction) {
     if (direction === -1 && currentSlideIndex > 0) {
         currentSlideIndex -= 1;
@@ -111,12 +126,20 @@ function moveSlide(direction) {
     }
     setPositionByIndex();
     updateDots(); // Update dots after slide changes
+
+    // Otomatik geçişi tekrar başlatmadan önce sıfırlayın
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, autoSlideInterval);
 }
 
 function currentSlide(index) {
     currentSlideIndex = index;
     setPositionByIndex();
     updateDots(); // Update dots when a dot is clicked
+
+    // Otomatik geçişi tekrar başlatmadan önce sıfırlayın
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, autoSlideInterval);
 }
 
 function updateDots() {
