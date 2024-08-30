@@ -169,6 +169,217 @@ form.d-flex {
     background-color: #00C26D;
 }
 
+/****************************************************/
+
+/* Logo Slider Konteyneri */
+.logo-slider-container {
+    position: relative;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Seçim Engelleme ve Drag işlemini engelleme */
+.logo-slider-container img {
+    user-select: none; /* Kullanıcının metni seçmesini engeller */
+    -webkit-user-drag: none; /* Resimlerin sürüklenmesini engeller */
+    pointer-events: none; /* Resimlerin etkileşimlerini devre dışı bırakır */
+}
+
+
+/* Logo Slayt İçeriği */
+.logo-slider-content {
+    width: 80%; /* İçerik genişliği */
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Logo Slider */
+.logo-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Bireysel Logo Slide */
+.logo-slide {
+    min-width: 150px; /* Logoların genişliği */
+    margin: 0 15px; /* Logolar arasındaki boşluk */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Önceki ve Sonraki Butonlar */
+.logo-prev, .logo-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.logo-prev {
+    left: 20x;
+}
+
+.logo-next {
+    right: 20px;
+}
+
+.logo-prev:hover, .logo-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/****************************************************/
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.events-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.events-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Kartlar arasındaki yatay boşluk 20px olarak ayarlandı */
+    max-width: 1200px; /* Kartları içeren konteynerin genişliği */
+    margin: 0 auto; /* Kartları yatayda ortalamak için */
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    height: 444px; /* Kartların yüksekliği sabitlendi */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px; /* Kartların genişliği */
+    margin-bottom: 20px; /* Alttan boşluk */
+    padding: 10px;
+}
+
+.card:hover {
+    border-color: #28a745;
+}
+
+.card-img-top {
+    height: 150px; /* Resim yüksekliği */
+    object-fit: cover;
+    margin-bottom: 10px; /* Resim ve içerik arasında boşluk */
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* İçeriği üstten hizalamak için */
+    align-items: center; /* İçeriği ortalamak için */
+    text-align: center; /* Metni ortalamak için */
+}
+
+.card-title {
+    font-size: 16px; /* Başlık boyutu */
+    font-weight: bold;
+    margin-bottom: 10px; /* Başlık ve alt metin arasında boşluk */
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+    text-align: center; /* Metni ortalamak için */
+    margin-bottom: 10px; /* Metin ve etiketler arasında boşluk */
+}
+
+.tags {
+    margin-bottom: 10px; /* Etiketler ve buton arasında boşluk */
+}
+
+.tags .badge {
+    margin-right: 5px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: auto; /* Footer'ın alt kısımda olmasını sağlar */
+}
+
+.text-center .btn-success {
+    padding: 8px 16px; /* Buton boyutları */
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: auto;
+    background-color: #00C26D;
+}
+
+.apply-btn {
+    padding: 4px 12px; /* Butonun inceltilmiş padding değerleri */
+    font-size: 13px; /* Font boyutu küçültüldü */
+    font-weight: bold;
+    background-color: #00C26D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Butonu geniş yapmak için */
+    max-width: 120px; /* Butonun maksimum genişliği */
+}
+
+.apply-btn:hover {
+    background-color: #02D076; /* Hover rengini koyulaştırdık */
+}
+
+.btn-success:hover{
+    background-color: #02D076;
+}
+
+.application-deadline {
+    font-size: 12px;
+    color: #666;
+    text-align: left;
+    margin-left: auto;
+    flex: 1;
+}
+
+.application-deadline span {
+    display: block; /* Metinleri alt alta getirmek için */
+}
+
+.application-deadline .deadline-date {
+    font-weight: bold; /* Tarihi kalın yapar */
+    font-size: 16px; /* Tarih için biraz daha büyük font boyutu */
+    margin-top: 5px; /* Tarih ile üstteki metin arasında boşluk */
+}
+
 
 
 
