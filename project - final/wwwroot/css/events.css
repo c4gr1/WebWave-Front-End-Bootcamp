@@ -182,19 +182,26 @@ form.d-flex {
     max-width: 600px;
 }
 
-.hero-section .discover-button {
-    background-color: #00C26D;
-    color: white;
+.discover-button {
     border: none;
-    padding: 15px 30px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-left: 10x;
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #00C26D;
+    border-radius: 5%;
+    width: 120px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Buton yazı rengini beyaz yapar */
+    cursor: pointer; /* Fareyi butonun üzerine getirdiğinizde işaretçi el şeklini alır */
 }
 
-.hero-section .discover-button:hover {
+.discover-button:hover {
     background-color: #02D076;
 }
+
 
 /************************************************/
 
@@ -347,6 +354,8 @@ form.d-flex {
 /************************************************/
 
 .quote-section {
+    padding-top: 100px;
+    padding-bottom: 75px;
     background-color: #00C26D; /* Green background color */
     height: 150px; /* Adjust the height as needed */
     display: flex;
@@ -357,8 +366,7 @@ form.d-flex {
 
 .quote-content p {
     margin: 0;
-    font-size: 24px; /* Adjust the font size as needed */
-    font-weight: bold;
+    font-size: 36px; /* Adjust the font size as needed */
     color: white; /* White text color */
 }
 
