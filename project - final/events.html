@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodlama Etkinlikleri | Bootcamp, Hiring Challange ve Hackathonlar</title>
+    <link rel="stylesheet" href="wwwroot/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="wwwroot/css/events.css">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid"> <!-- Ana kapsayıcı div -->
+            <div class="header-content"> <!-- Yeni eklenen iç kapsayıcı div -->
+                <a class="navbar-brand" href="#">
+                    <img src="wwwroot/assets/logo.svg" alt="Techcareer Logo" width="150">
+                </a>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Etkinlik, İş İlanı, Blog Ara" aria-label="Search">
+                </form>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="etkinliklerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Etkinlikler
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="etkinliklerDropdown">
+                                <li><a class="dropdown-item" href="#">Bootcamp</a></li>
+                                <li><a class="dropdown-item" href="#">Hackatlon</a></li>
+                                <li><a class="dropdown-item" href="#">Hring Challenge</a></li>
+                                <li><a class="dropdown-item" href="#">Tüm Etkinlikler</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="isIlaniLink">
+                                İş İlanları
+                            </a>
+                            <div class="dropdown-text" id="isIlaniText">
+                                Yeni işinle sen de hayalindeki kariyere kavuşabilirsin! Senin için topladığımız iş fırsatlarını şimdi incele!
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="egitimlerLink">
+                                <span class="green-dot"></span> Eğitimler
+                            </a>
+                        </li>                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="komuniteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Komünite
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="komuniteDropdown">
+                                <li><a class="dropdown-item" href="#">Komüniteye Katıl</a></li>
+                                <li><a class="dropdown-item" href="#">TDC</a></li>
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
+                                <li><a class="dropdown-item" href="#">Podcast</a></li>
+                                <li><a class="dropdown-item" href="#">Kariyer Rehberi</a></li>
+                                <li><a class="dropdown-item" href="#">Teknik Sözlük</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Şirketler</a>
+                        </li>
+                    </ul>
+                    <div class="header-button">
+                        <a href="#" class="btn btn-success">Giriş / Üye Ol</a>
+                    </div>
+                </div>
+            </div> <!-- header-content bitiş -->
+        </div> <!-- container-fluid bitiş -->
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a href="#">Ana Sayfa</a> >
+                    <a href="#">Etkinlikler</a>
+                </nav>
+                <h1>Tüm Etkinlikler</h1>
+                <p>Techcareer.net ile teknoloji dünyasına adım at! En yenilikçi yazılım eğitimleri ve teknoloji yarışmalarına katıl, bilgi ve becerilerini geliştir. Hemen keşfet, hızla başvur ve kariyerini ileri taşı!</p>
+                <button class="discover-button">Keşfet</button>
+            </div>
+        </section>
+        
+        <section class="events-section">
+            <div class="container">
+                <h2 class="text-center mb-4">Başvurunu Bekleyen Etkinlikler</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event1.png" class="card-img-top" alt="Etkinlik 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Hiring Day'10 Ekim</h5>
+                                <p class="card-text">Teknolojinin lider şirketleri ve Türkiye'nin en büyük yazılım topluluğu bu fuarda!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Hiring Challange</span>
+                                    <span class="badge bg-secondary">İş Fırsatı</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">08.10.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event2.png" class="card-img-top" alt="Etkinlik 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Üniversitelilere Özel: C# Code Challengep</h5>
+                                <p class="card-text">Ücretsiz öğren, mezun ol, teknoloji kariyerinde güçlü bir adım at!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Bootcamp</span>
+                                    <span class="badge bg-secondary">Diğer</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">26.09.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event3.png" class="card-img-top" alt="Etkinlik 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Üniversitelilere Özel: Cyber 101 Bootcamp</h5>
+                                <p class="card-text">Ücretsiz öğren, mezun ol, sertifika sahibi ol!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Bootcamp</span>
+                                    <span class="badge bg-secondary">Diğer</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">03.10.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event4.png" class="card-img-top" alt="Etkinlik 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Üniversitelilere Özel: Data Science 101 Bootcamp</h5>
+                                <p class="card-text">Ücretsiz öğren, mezun ol, sertifika sahibi ol!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Bootcamp</span>
+                                    <span class="badge bg-secondary">Diğer</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">10.10.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event5.png" class="card-img-top" alt="Etkinlik 3">
+                            <div class="card-body">
+                                <h5 class="card-title">PHP Prodigy: WebApp Development Bootcamp</h5>
+                                <p class="card-text">Ücretsiz öğren, mezun ol, sertifika sahibi ol!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Bootcamp</span>
+                                    <span class="badge bg-secondary">İş Fırsatı</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">01.09.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event6.png" class="card-img-top" alt="Etkinlik 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Business Intelligence MSSQL Workshop</h5>
+                                <p class="card-text">Ücretsiz öğren, mezun ol, sertifika sahibi ol!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Bootcamp</span>
+                                    <span class="badge bg-secondary">İş Fırsatı</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">02.09.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event7.png" class="card-img-top" alt="Etkinlik 3">
+                            <div class="card-body">
+                                <h5 class="card-title">C# Essentials Bootcamp</h5>
+                                <p class="card-text">Ücretsiz öğren, mezun ol, sertifika sahibi ol!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Bootcamp</span>
+                                    <span class="badge bg-secondary">İş Fırsatı</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">02.09.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event8.png" class="card-img-top" alt="Etkinlik 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Unity Beginner to Pro Workshop</h5>
+                                <p class="card-text">Ücretsiz öğren, mezun ol, sertifika sahibi ol!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Bootcamp</span>
+                                    <span class="badge bg-secondary">İş Fırsatı</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">03.09.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event9.png" class="card-img-top" alt="Etkinlik 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Flutter Workshop</h5>
+                                <p class="card-text">Ücretsiz öğren, mezun ol, sertifika sahibi ol!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Bootcamp</span>
+                                    <span class="badge bg-secondary">İş Fırsatı</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">05.09.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event10.png" class="card-img-top" alt="Etkinlik 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Expert MVC Framework Workshop</h5>
+                                <p class="card-text">Ücretsiz öğren, mezun ol, sertifika sahibi ol!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Bootcamp</span>
+                                    <span class="badge bg-secondary">İş Fırsatı</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">08.09.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event11.png" class="card-img-top" alt="Etkinlik 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Code Crunch: JavaScript Essentials Workshop</h5>
+                                <p class="card-text">Ücretsiz öğren, mezun ol, sertifika sahibi ol!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Bootcamp</span>
+                                    <span class="badge bg-secondary">İş Fırsatı</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">08.09.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event12.png" class="card-img-top" alt="Etkinlik 3">
+                            <div class="card-body">
+                                <h5 class="card-title">QA Elavate Bootcamp</h5>
+                                <p class="card-text">Ücretsiz öğren, mezun ol, sertifika sahibi ol!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Bootcamp</span>
+                                    <span class="badge bg-secondary">İş Fırsatı</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">09.09.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event13.png" class="card-img-top" alt="Etkinlik 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Create with Code: HTML & CSS Essentials</h5>
+                                <p class="card-text">Ücretsiz öğren, mezun ol, sertifika sahibi ol!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Bootcamp</span>
+                                    <span class="badge bg-secondary">İş Fırsatı</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">10.09.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event14.png" class="card-img-top" alt="Etkinlik 3">
+                            <div class="card-body">
+                                <h5 class="card-title">SQL Foundations Bootcamp</h5>
+                                <p class="card-text">Ücretsiz öğren, mezun ol, sertifika sahibi ol!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Bootcamp</span>
+                                    <span class="badge bg-secondary">İş Fırsatı</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">10.09.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event15.png" class="card-img-top" alt="Etkinlik 3">
+                            <div class="card-body">
+                                <h5 class="card-title">RApid Web Design: Bootstrap Workshop</h5>
+                                <p class="card-text">Ücretsiz öğren, mezun ol, sertifika sahibi ol!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Bootcamp</span>
+                                    <span class="badge bg-secondary">İş Fırsatı</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">15.09.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="wwwroot/assets/about_event16.png" class="card-img-top" alt="Etkinlik 3">
+                            <div class="card-body">
+                                <h5 class="card-title">DevOps Jenkins Workshop</h5>
+                                <p class="card-text">Ücretsiz öğren, mezun ol, sertifika sahibi ol!</p>
+                                <div class="tags">
+                                    <span class="badge bg-secondary">Bootcamp</span>
+                                    <span class="badge bg-secondary">İş Fırsatı</span>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <div class="application-deadline">
+                                    <span>SON BAŞVURU:</span>
+                                    <span class="deadline-date">17.09.2024</span>
+                                </div>
+                                <button class="apply-btn btn btn-success">Başvur</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous" id="prev-page">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#" data-page="1">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next" id="next-page">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+            </div>
+        </section>
+                
+
+    </main>
+    <script src="wwwroot/js/pagination.js"></script>
+</body>
+</html>

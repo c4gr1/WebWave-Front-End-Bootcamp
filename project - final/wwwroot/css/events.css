@@ -1,0 +1,345 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F0F0F0;
+}
+
+.header-content {
+    max-width: 1300px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.navbar-brand img {
+    max-height: 50px;
+}
+
+form.d-flex {
+    flex-grow: 1;
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.dropdown-menu {
+    min-width: 150px;
+    border-top: 4px solid #00C26D;
+    border-radius: 0 0 5px 5px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.dropdown-menu a.dropdown-item {
+    color: #333; 
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu a.dropdown-item:hover {
+    color: #00C26D; 
+    background-color: #f8f9fa; 
+}
+
+.dropdown-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 325px;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.form-control::placeholder {
+    color: #A5A9B3; /* Buraya istediğiniz rengi yazabilirsiniz */
+    opacity: 0.8; /* Opaklık ayarını isteğe göre değiştirebilirsiniz */
+}
+
+.dropdown-text::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+}
+
+.nav-item:hover .dropdown-text {
+    display: block;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.nav-item.dropdown .dropdown-toggle::after {
+    display: none;
+}
+
+.header-button .btn-success {
+    border: none;
+    margin-left: 150px;
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #00C26D;
+    width: 120px; 
+    height: 36px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-button .btn-success:hover {
+    background-color: #02D076;
+}
+
+.green-dot {
+    height: 8px; 
+    width: 8px; 
+    background-color: #00C26D; 
+    border-radius: 50%; 
+    display: inline-block;
+    margin-right: 6px; 
+    vertical-align: middle; 
+}
+
+.nav-item a.nav-link:hover {
+    color: #00C26D;
+}
+
+/*********************************************/
+
+
+/* Hero Section */
+.hero-section {
+    background-image: url('../assets/events-background.png'); /* Arka plan resmi */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: white;
+}
+
+.hero-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Breadcrumb stil ayarları */
+.hero-section .breadcrumb {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: white; /* Metin rengini beyaz yapar */
+}
+
+.hero-section .breadcrumb a {
+    color: white; /* Linklerin rengini beyaz yapar */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    margin-right: 5px; /* Her bir bağlantı arasında küçük bir boşluk */
+}
+
+.hero-section .breadcrumb a:hover {
+    text-decoration: underline; /* Üzerine gelindiğinde alt çizgi ekler */
+}
+
+.hero-section .breadcrumb li + li::before {
+    content: '>'; /* İki öğe arasına ">" işaretini ekler */
+    margin: 0 5px; /* İki öğe arasındaki mesafeyi ayarlar */
+    color: white; /* ">" işaretinin rengini beyaz yapar */
+}
+
+
+.hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.hero-section .discover-button {
+    background-color: #00C26D;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero-section .discover-button:hover {
+    background-color: #02D076;
+}
+
+/************************************************/
+
+.events-section {
+    padding: 40px 175px;
+    background-color: #f9f9f9;
+}
+
+.events-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+    height: 444px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px; 
+    margin-bottom: 20px; 
+    padding: 10px;
+}
+
+.card:hover {
+    border-color: black;
+}
+
+.card-img-top {
+    height: 150px; 
+    object-fit: cover;
+    margin-bottom: 10px; 
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.card-title {
+    font-size: 16px; 
+    font-weight: bold;
+    margin-bottom: 10px; 
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+    text-align: center; 
+    margin-bottom: 10px; 
+}
+
+.tags {
+    margin-bottom: 10px; 
+}
+
+.tags .badge {
+    margin-right: 5px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: auto; 
+}
+
+.apply-btn {
+    padding: 4px 12px; 
+    font-size: 13px; 
+    font-weight: bold;
+    background-color: #00C26D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; 
+    max-width: 120px; 
+}
+
+.apply-btn:hover {
+    background-color: #02D076; 
+}
+
+.btn-success:hover{
+    background-color: #02D076;
+}
+
+.application-deadline {
+    font-size: 12px;
+    color: #666;
+    text-align: left;
+    margin-left: auto;
+    flex: 1;
+}
+
+.application-deadline span {
+    display: block; 
+}
+
+.application-deadline .deadline-date {
+    font-weight: bold; 
+    font-size: 16px; 
+    margin-top: 5px; 
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.page-item .page-link {
+    color: #000; /* Varsayılan buton yazı rengi */
+    border-radius: 5px;
+    margin: 0 5px; /* Butonlar arasındaki mesafe */
+    border: 1px solid #ddd;
+}
+
+.page-item.active .page-link {
+    background-color: #fff;
+    border-color: #00C26D; /* Aktif sayfa butonu yeşil border */
+    color: #00C26D; /* Aktif sayfa yazısı yeşil */
+}
+
+.page-item .page-link:hover {
+    color: #00C26D; /* Hover sırasında buton yazı rengi */
+}
+
+.page-item.disabled .page-link {
+    color: #ccc; /* Disabled buton yazı rengi */
+}
