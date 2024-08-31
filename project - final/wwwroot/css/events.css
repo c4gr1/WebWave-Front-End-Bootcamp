@@ -343,3 +343,167 @@ form.d-flex {
 .page-item.disabled .page-link {
     color: #ccc; /* Disabled buton yazı rengi */
 }
+
+/************************************************/
+
+.quote-section {
+    background-color: #00C26D; /* Green background color */
+    height: 150px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.quote-content p {
+    margin: 0;
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: white; /* White text color */
+}
+
+.quote-content p:last-child {
+    margin-top: 10px; /* Space between quote and author name */
+    font-size: 20px; /* Adjust font size for the author name */
+    font-weight: normal; /* Normal font weight for author name */
+}
+
+/************************************************/
+
+.closed-events-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 150px; /* Üst-alt 50px, sağ-sol 40px */
+    text-align: left;
+}
+
+.closed-events-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closed-events-section .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+    height: 444px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.closed-events-section .card:hover {
+    border-color: black;
+}
+
+.closed-events-section .card-img-top {
+    height: 150px; 
+    object-fit: cover;
+    margin-bottom: 10px; 
+}
+
+.closed-events-section .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.closed-events-section .card-title {
+    font-size: 16px; 
+    font-weight: bold;
+    margin-bottom: 10px; 
+}
+
+.closed-events-section .card-text {
+    font-size: 14px;
+    color: #555555;
+    text-align: center; 
+    margin-bottom: 10px; 
+}
+
+.closed-events-section .tags {
+    margin-bottom: 10px; 
+}
+
+.closed-events-section .tags .badge {
+    margin-right: 5px;
+}
+
+.closed-events-section .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: auto; 
+}
+
+.closed-events-section .text-center .btn-success {
+    padding: 8px 16px; 
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: auto;
+    background-color: #00C26D;
+}
+
+.closed-events-section .apply-btn {
+    padding: 4px 12px; 
+    font-size: 13px; 
+    font-weight: bold;
+    background-color: #00C26D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; 
+    max-width: 120px; 
+}
+
+.closed-events-section .apply-btn:hover {
+    background-color: #02D076; 
+}
+
+.closed-events-section .btn-success:hover{
+    background-color: #02D076;
+}
+
+.closed-events-section .application-deadline {
+    font-size: 12px;
+    color: #666;
+    text-align: left;
+    margin-left: auto;
+    flex: 1;
+}
+
+.closed-events-section .application-deadline span {
+    display: block; 
+}
+
+.closed-events-section .application-deadline .deadline-date {
+    font-size: 14px; 
+    margin-top: 5px; 
+}
+
+/************************************************/
+
+.accordion-button {
+    background-color: #f8f9fa; /* Açık gri arka plan */
+    color: #333; /* Koyu yazı rengi */
+    font-weight: bold; /* Yazıyı kalın yapma */
+}
+
+.accordion-button:not(.collapsed) {
+    color: #000; /* Tıklanınca yeşil yapma */
+    background-color: #fff; /* Tıklanınca beyaz yapma */
+}
+
+.accordion-body {
+    background-color: #f8f9fa; /* Gövde arka plan rengi */
+    padding: 20px; /* İçerik boşluğu */
+    font-size: 14px; /* Yazı boyutu */
+    line-height: 1.5; /* Satır yüksekliği */
+}
