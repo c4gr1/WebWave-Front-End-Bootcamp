@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #F0F0F0;
+    background-color: #F6F6F6;
 }
 
 .header-content {
@@ -506,4 +506,173 @@ form.d-flex {
     padding: 20px; /* İçerik boşluğu */
     font-size: 14px; /* Yazı boyutu */
     line-height: 1.5; /* Satır yüksekliği */
+}
+
+/****************************************************/
+
+.site-footer {
+    background-color: #F0F0F0;
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+.site-footer .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    color: #6c757d;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #212529;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo-img {
+    max-width: 150px;
+    margin-bottom: 8px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    color: #6c757d;
+    margin: 0;
+}
+
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media h4 {
+    font-size: 14px;
+    color: #212529;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.social-media a img {
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/****************************************************/
+
+.legal-footer {
+    background-color: #F0F0F0;
+    padding: 20px 0;
+    font-size: 12px;
+    color: #6c757d;
+    border-top: 1px solid #dee2e6;
+}
+
+.legal-footer .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.legal-footer-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 12px;
+    color: #6c757d;
+    padding-bottom: 10px;
+}
+
+.lang-section {
+    display: flex;
+}
+
+.lang-section a {
+    color: #6c757d;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.lang-section a:hover {
+    text-decoration: underline;
+}
+
+.copyright-section {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.copyright-section span {
+    margin-right: 10px;
+}
+
+.copyright-section .support-email {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.copyright-section .support-email:hover {
+    text-decoration: underline;
+}
+
+.legal-content {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.legal-content img.iskur-logo {
+    margin-right: 15px;
+    max-width: 50px;
+}
+
+.legal-content p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 8.8px;
+    color: #6c757d;
 }
