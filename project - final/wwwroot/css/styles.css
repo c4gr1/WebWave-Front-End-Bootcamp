@@ -950,7 +950,145 @@ form.d-flex {
     color: #6c757d;
 }
 
+/****************************************************/
 
+@media (max-width: 1200px) {
+    .header-content {
+        padding: 0 15px;
+    }
+    
+    .cards-container {
+        flex-wrap: wrap;
+    }
 
+    .card {
+        width: 45%;
+    }
 
+    .participant-slide_2 {
+        flex: 0 0 48%;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-content form.d-flex {
+        display: none !important;
+    }
+
+    .cards-container {
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .participant-slider_2 {
+        flex-wrap: wrap;
+    }
+
+    .participant-slide_2 {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .dropdown-text {
+        width: 280px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .events-section_2 {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .event_2 {
+        margin-bottom: 20px;
+    }
+
+    .neden-techcareer h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature-item {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .slider-container {
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider-content {
+        width: 100%;
+    }
+
+    .participant-section_2 h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .participant-slide_2 {
+        flex: 0 0 100%;
+    }
+
+    .logo-slide {
+        min-width: 100px;
+        margin: 0 5px;
+    }
+
+    .contact-section h2 {
+        font-size: 28px;
+    }
+
+    .contact-section p {
+        font-size: 18px;
+    }
+
+    .contact-form input[type="email"] {
+        max-width: 100%;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
 
