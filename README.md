@@ -2,7 +2,7 @@
 Projects and exercises from the Webwave: Front-End Bootcamp, covering HTML, CSS, Bootstrap, JavaScript and React.
 
 - **Bootstrap**: Includes Bootstrap examples.
-- **CSS: Includes** CSS notes and examples.
+- **CSS**: Includes CSS notes and examples.
 - **Git & Github**: Includes Git and Github notes.
 - **HTML**: Includes HTML notes and examples.
 - **JavaScript**: Includes JavaScript notes and examples.
